@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ML Strength - Book a session</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Link to script that handles the components -->
+    <script src="/js/script.js" defer></script>
+    <!-- Link to external icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <main>
+      <header class="header-component"></header>
+
+      <section>
+        <h1 class="big-deal">
+          <span class="cutout">Book</span>
+          a Session
+        </h1>
+
+        <span>* denotes required field</span>
+        <!-- First name -->
+        <form action="" class="col-5 booking">
+          <i data-feather="user" class="icon-secondary"></i>
+          <label for="first_name" class="required">First name:</label>
+          <input
+            required
+            type="text"
+            name="first_name"
+            minlength="2"
+            maxlength="80"
+            id="first_name"
+            title="Please enter a valid name"
+            pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*){80}$"
+            placeholder="First name *" />
+          <span class="form-requirement">Please enter a valid name.</span>
+          <i class="icon-secondary"></i>
+          <div class="popup"></div>
+
+          <!-- Last name -->
+          <i data-feather="user" class="icon-secondary"></i>
+          <label for="last_name" class="required">Last name:</label>
+          <input
+            required
+            type="text"
+            id="last_name"
+            minlength="2"
+            maxlength="255"
+            title="Please enter a valid name"
+            pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
+            placeholder="Last name *" />
+          <span class="form-requirement">Please enter a valid name.</span>
+          <i class="icon-secondary"></i>
+          <div class="popup"></div>
+
+          <!-- Phone number -->
+          <i data-feather="phone" class="icon-secondary"></i>
+          <label for="phone" class="required">Phone number:</label>
+          <input
+            required
+            type="phone"
+            id="phone"
+            pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+            title="Please enter a valid phone number"
+            placeholder="Phone number *" />
+          <span class="form-requirement">Please enter a valid number.</span>
+          <i class="icon-secondary"></i>
+          <div class="popup"></div>
+
+          <!-- Email -->
+          <i data-feather="mail" class="icon-secondary"></i>
+          <label for="email" class="required">Email:</label>
+          <input required type="email" id="email" placeholder="Email *" />
+          <span class="form-requirement">Please enter a valid email.</span>
+          <i class="icon-secondary"></i>
+          <div class="popup"></div>
+
+          <!-- Age -->
+          <i data-feather="calendar" class="icon-secondary"></i>
+          <!-- Restricts age to between 18 and 100 years old -->
+          <label for="dob">Date of birth:</label>
+          <input
+            required
+            type="date"
+            id="dob"
+            max="2004-12-31"
+            min="1922-01-01"
+            placeholder="Date of birth" />
+          <span class="form-requirement">Please enter your date of birth.</span>
+          <i class="icon-secondary"></i>
+          <div class="popup"></div>
+
+          <!-- Message -->
+          <i data-feather="edit" class="icon-secondary"></i>
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            rows="7"
+            cols="50"
+            maxlength="500"
+            placeholder="Message"></textarea>
+          <i
+            data-feather="help-circle"
+            class="icon-secondary"
+            onClick="popupHelp()"></i>
+          <div class="popup">
+            <span class="popupgif" id="help-popup">
+              <img
+                src="/video/help_popup_message.gif"
+                alt="Gif showing a suggested message to send" />
+            </span>
+          </div>
+
+          <!-- Program -->
+          <i class="icon-secondary"></i>
+          <label for="program">Program:</label>
+          <select name="program" id="program">
+            <option value="" disabled selected hidden>Select class</option>
+            <option value="Body attack">Body attack</option>
+            <option value="Zumba">Zumba</option>
+            <option value="Body pump">Body pump</option>
+            <option value="Body step">Body step</option>
+            <option value="Rpm">Rpm</option>
+            <option value="Body balance">Body balance</option>
+            <option value="Body combat">Body combat</option>
+            <option value="Body jam">Body jam</option>
+            <option value="Body vive">Body vive</option>
+            <option value="Cycle">Cycle</option>
+            <option value="Cycle extreme">Cycle extreme</option>
+            <option value="Pilates">Pilates</option>
+            <option value="Yoga">Yoga</option>
+            <option value="Aqua fit & aqua mode">Aqua fit & aqua mode</option>
+            <option value="Boxing & TAE box">Boxing & TAE box</option>
+            <option value="Step moves, step basic & step burn">
+              Step moves, step basic & step burner
+            </option>
+            <option value="Rejuvenate, low impact & gentle fitne">
+              Rejuvenate, low impact & gentle fitness
+            </option>
+            <option value="Cardio blitz & cardio circuit">
+              Cardio blitz & cardio circuit
+            </option>
+            <option value="World dance & dance">World dance & dance</option>
+            <option value="Hilo & fat burner">Hilo & fat burner</option>
+            <option value="Sculpt & combo">Sculpt & combo</option>
+            <option value="Power hour">Power hour</option>
+            <option value="ABT">ABT</option>
+            <option value="Abs blast">Abs blast</option>
+            <option value="Tai chi">Tai chi</option>
+            <option value="Chi ball">Chi ball</option>
+          </select>
+          <i class="icon-secondary"></i>
+          <div class="popup"></div>
+
+          <!-- Submit form -->
+          <button action="submit" class="btn btn-primary grid-col-3">
+            Book Now
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-component"></footer>
+    <!-- External icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
